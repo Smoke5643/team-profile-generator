@@ -3,7 +3,7 @@
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Desciption
-  Team sheet generator is a program that runs in the command line via node.js that accepts user input to create an html document that displays the user's team. It can be cloned into your local machine here: https://github.com/smoke5643/team-profile-generator
+  Team Profile Generator is a program that runs in the command line via node.js that accepts user input to create an html document that displays the user's team. It can be cloned into your local machine here: https://github.com/smoke5643/team-profile-generator
 
   ## Table of Contents
   * [Installation](#installation)
