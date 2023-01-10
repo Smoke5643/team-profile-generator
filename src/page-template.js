@@ -8,8 +8,8 @@ const generateTeamMembers = (team) => {
                 <h3>${member.getName()}</h3>
             <ul>
         <li>Id: ${member.getId()}</li>
-        <li>Email: ${member.getEmail()}</li>
-        <li>GitHub: <a href="#github">${member.getGithub()}</a></li>
+        <li>Email: <a href= 'mailto:${member.getEmail()}'>${member.getEmail()}</a></li>
+        <li>GitHub: <a href='https://www.github.com/${member.getGithub()}' target='_blank'>${member.getGithub()}</a></li>
       </ul>
     </article>
             `
@@ -21,7 +21,7 @@ const generateTeamMembers = (team) => {
                 <h3>${member.getName()}</h3>
             <ul>
         <li>Id: ${member.getId()}</li>
-        <li>Email: ${member.getEmail()}</li>
+        <li>Email: <a href= 'mailto:${member.getEmail()}'>${member.getEmail()}</a></li>
         <li>School: ${member.getSchool()}</li>
       </ul>
     </article>
@@ -34,7 +34,7 @@ const generateTeamMembers = (team) => {
                 <h3>${member.getName()}</h3>
             <ul>
         <li>Id: ${member.getId()}</li>
-        <li>Email: ${member.getEmail()}</li>
+        <li>Email: <a href= 'mailto:${member.getEmail()}'>${member.getEmail()}</a></li>
         <li>Office Number: ${member.getOfficeNumber()}</li>
       </ul>
     </article>

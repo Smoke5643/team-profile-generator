@@ -43,7 +43,7 @@ const engineerQuestions = [
     },
     {
         message: 'What is the engineer\'s GitHub?',
-        name: 'officeNumber',
+        name: 'gitHub',
     },
 ]
 const internQuestions = [
@@ -61,7 +61,7 @@ const internQuestions = [
     },
     {
         message: 'What is the intern\'s school?',
-        name: 'officeNumber',
+        name: 'school',
     },
 ]
 
@@ -72,7 +72,6 @@ const chooseEmployeeType = () => {
         choices: [
             'Engineer',
             'Intern',
-            'Manager',
         ],
         name: 'type',
     })
