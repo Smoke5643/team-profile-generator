@@ -66,8 +66,18 @@ const internQuestions = [
 ]
 
 const chooseEmployeeType = () => {
-
+    return prompt({
+        type: 'rawlist',
+        message: 'Which kind of employee are you adding?',
+        choices: [
+            'Engineer',
+            'Intern',
+            'Manager',
+        ],
+        name: 'type',
+    })
 };
+
 
 const selectEmployeeType = async ({ type }) => {
     switch(type) {
@@ -97,10 +107,15 @@ const selectEmployeeType = async ({ type }) => {
 
 const confirmMoreEmployees = ({ addEmployee }) => {
     if (addEmployee) {
-        console.log('PROCEED');
+        console.log('PROCEED')
+        chooseEmployeeType()
+        .then(selectEmployeeType)
+        .then(addMoreEmployees)
+        .then(confirmMoreEmployees);
     } else {
         const template = pageTemplate(teamMembers);
         fs.writeFileSync('./dist/team.html', template)
+        console.log('Successfully written to .dist/team.html')
     };
 }
 
@@ -118,14 +133,7 @@ prompt(managerQuestions)
         const manager = new Manager(name, id, email, officeNumber);
         teamMembers.push(manager);
     })
-    .then(() => {
-        return prompt({
-            message: 'Would you like to add more employees?',
-            type: 'confirm',
-            name: 'addEmployee',
-        })
-    })
-    .then(chooseEmployeeType)
-    .then(confirmMoreEmployees)
     .then(addMoreEmployees)
+    .then(confirmMoreEmployees)
+   
         

@@ -9,7 +9,7 @@ const generateTeamMembers = (team) => {
             <ul>
         <li>Id: ${member.getId()}</li>
         <li>Email: ${member.getEmail()}</li>
-        <li>GitHub: <a href="#github">${member.getGitHub()}</a></li>
+        <li>GitHub: <a href="#github">${member.getGithub()}</a></li>
       </ul>
     </article>
             `
@@ -22,7 +22,7 @@ const generateTeamMembers = (team) => {
             <ul>
         <li>Id: ${member.getId()}</li>
         <li>Email: ${member.getEmail()}</li>
-        <li>School: <a href="#github">${member.getSchool()}</a></li>
+        <li>School: ${member.getSchool()}</li>
       </ul>
     </article>
             `
@@ -35,25 +35,25 @@ const generateTeamMembers = (team) => {
             <ul>
         <li>Id: ${member.getId()}</li>
         <li>Email: ${member.getEmail()}</li>
-        <li>Office Nunmber: <a href="#github">${member.getOfficeNumber()}</a></li>
+        <li>Office Number: ${member.getOfficeNumber()}</li>
       </ul>
     </article>
             `
         }
-    }).join('')
+    }).join('');
 };
 
 // export function to generate entire page
 module.exports = (team) => {
     // TODO: MAIN HTML TEMPLATE LITERAL GOES HERE
- return   `<!-- Instructor provided template -->
+    return `<!-- Instructor provided template -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ENTER PAGE TITLE HERE</title>
+  <title>Team Profle Generator</title>
   <!-- Minified version -->
   <style>
     @import "https://cdn.simplecss.org/simple.min.css";
